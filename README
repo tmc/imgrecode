@@ -1,0 +1,14 @@
+imgrecode reads images on stdin and prints them to stdout
+
+
+
+Example:
+
+$ cat Kodak_CX7530.jpg | imgrecode > Kodak_CX7530.png
+$ cat Kodak_CX7530.jpg | imgrecode -jpeg 90 > Kodak_CX7530-2.jpg
+$ identify -verbose Kodak_CX7530.jpg |grep -c exif
+57
+$ identify -verbose Kodak_CX7530-2.jpg |grep exif
+0
+$ identify -verbose Kodak_CX7530.png |grep -c exif
+0
